@@ -34,13 +34,14 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version> <!-- Stable for Java 21+ -->
+                <version>3.11.0</version> <!-- Proven stable with Java 23 -->
                 <configuration>
-                    <release>23</release> <!-- Use release, not source/target -->
+                    <release>23</release>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
 
 
 
