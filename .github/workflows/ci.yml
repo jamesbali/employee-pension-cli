@@ -20,5 +20,8 @@ jobs:
           java-version: '23'
           distribution: 'temurin'
 
+      - name: Show effective POM
+        run: mvn help:effective-pom
+
       - name: Build with Maven
         run: mvn -B clean verify
