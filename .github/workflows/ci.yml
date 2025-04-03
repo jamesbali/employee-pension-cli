@@ -20,6 +20,13 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
+      - name: Install Maven 3.9.6
+        run: |
+          curl -fsSL https://downloads.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz -o maven.tar.gz
+          tar -xzf maven.tar.gz
+          sudo mv apache-maven-3.9.6 /opt/maven
+          echo "MAVEN_HOME=/opt/maven" >> $GITHUB_ENV
+          echo "/opt/maven/bin" >> $GITHUB_PATH
+
       - name: Build with Maven
         run: mvn -B clean verify
-
